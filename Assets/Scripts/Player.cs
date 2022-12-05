@@ -15,6 +15,7 @@ namespace AiroplaneCommand
         public GameObject target;
         [Header("Player Speed")]
         public float MaxSpeed = 30f;
+        public Transform startPosition;
         bool Isaccelaration;
         bool IsDeaccelaration;
         public bool isKinemeticActive = true;
@@ -74,6 +75,10 @@ namespace AiroplaneCommand
         {
             transform.Translate(0, 0, speed * Time.deltaTime);
             
+        }
+        public void SetStartPosition()
+        {
+            transform.position = startPosition.position;
         }
         public void Rotate(float value)
         {

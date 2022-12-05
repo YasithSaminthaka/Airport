@@ -10,6 +10,9 @@ namespace AiroplaneCommand
         public void Down(bool value);
         public void RotateLeft(bool value);
         public void RotateRight(bool value);
+        public void GameStart();
+        public void Replay();
+        public void NextLevel();
 
     }
 }

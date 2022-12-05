@@ -20,6 +20,24 @@ namespace AiroplaneCommand
             player.Down(value);
         }
 
+        public void GameStart()
+        {
+            player.isStart = true;
+            player.SetStartPosition();
+        }
+
+        public void NextLevel()
+        {
+            player.isStart = true;
+            player.SetStartPosition();
+        }
+
+        public void Replay()
+        {
+            player.isStart = true;
+            player.SetStartPosition();
+        }
+
         public void RotateLeft(bool value)
         {
             player.IsLeftRotateon = value;         

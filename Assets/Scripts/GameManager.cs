@@ -45,9 +45,28 @@ namespace AiroplaneCommand
         {
             playerCommand.Down(value);
         }
+        public void Replay()
+        {
+            StartCoroutine(WaitForReplay());
+        }
         public void Next()
         {
-
+            StartCoroutine(WaitForNext());
+        }
+        IEnumerator WaitForNext()
+        {
+            yield return new WaitForSeconds(1f);
+            playerCommand.NextLevel();
+            
+        }
+        IEnumerator WaitForReplay()
+        {
+            yield return new WaitForSeconds(1f);
+            playerCommand.GameStart();
+        }
+        public void StartGame()
+        {
+            playerCommand.GameStart();
         }
         public void SetStatus(bool value)
         {
